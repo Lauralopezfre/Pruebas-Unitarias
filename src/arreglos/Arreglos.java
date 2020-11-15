@@ -35,12 +35,12 @@ public class Arreglos {
     
     public int mayor(int datos[]) throws VacioException{
         
-        int mayor = 0;
+        int mayor = datos[0];
         
         if(vacio(datos)) throw new VacioException("El arreglo esta vacio");
         
         for (int dato : datos) { 
-            if(mayor > dato){
+            if(mayor < dato){
                 mayor = dato;
             }
         }
@@ -50,12 +50,12 @@ public class Arreglos {
     
     public int menor(int datos[]) throws VacioException{
         
-        int menor = 0;
+        int menor = datos[0];
         
         if(vacio(datos)) throw new VacioException("El arreglo esta vacio");
         
         for (int dato : datos) { 
-            if(menor < dato){
+            if(menor > dato){
                 menor = dato;
             }
         }
